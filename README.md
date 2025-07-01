@@ -1,2 +1,2 @@
-# Funbrain-Theme
-A custom wordpress theme based on funbrain arcade
+# funbrain
+Custom Wordpress Theme
