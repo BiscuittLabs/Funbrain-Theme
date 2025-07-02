@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburger.addEventListener("click", () => {
     // 👇 Show/hide the navigation menu
     nav.classList.toggle("active");
+    //console.log("Swap Hamburger");
 
     // ✖️ Animate the hamburger into an X and back
     hamburger.classList.toggle("active");

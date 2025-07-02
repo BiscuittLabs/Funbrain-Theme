@@ -180,6 +180,102 @@ h1 {
 }
 
 /* ---------------------------------------------
+   🎮 GAMEBOARD STYLES
+   - Styled like fun arcade board game
+   - Responsive across screen sizes
+---------------------------------------------- */
+
+.gameboard-wrapper {
+    display: flex; /* Places sidebar and board side-by-side */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem; /* Space between sidebar and board */
+    justify-content: center; /* Center contents horizontally */
+    align-items: flex-start; /* Align top edges */
+    padding: 2rem; /* Space around the whole layout */
+}
+
+.sidebar {
+    flex: 1 1 250px; /* Flexible column base 250px */
+    max-width: 300px; /* Limit to prevent overgrowth */
+    background: #932121; /* Red background */
+    border-radius: 16px; /* Rounded corners */
+    padding: 1.5rem; /* Internal spacing */
+    box-shadow: 4px 4px 0 #000; /* Comic-style drop shadow */
+    font-family: "Comic Sans MS", cursive; /* Arcade-style font */
+}
+
+.board {
+    position: relative; /* Needed for absolutely positioning player */
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(3, 100px); /* 3 columns */
+    gap: 1rem; /* Space between tiles */
+    padding: 1rem; /* Padding inside board area */
+    border-radius: 12px; /* Rounded board edges */
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background: #ffd700; /* Arcade yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 16px;
+    box-shadow: 2px 2px 0 #444; /* Depth effect */
+    position: relative;
+    cursor: pointer; /* Clickable look */
+}
+
+.player-piece {
+    width: 30px; /* Avatar size */
+    position: absolute; /* Positioned over tiles */
+    transform: translate(0, 0); /* Will move later with JS */
+    transition: transform 0.4s ease; /* Smooth movement */
+    z-index: 10; /* On top of everything */
+}
+
+/* ---------------------------------------------
+   GAMEBOARD SVG
+   - Styled like fun arcade board game
+   - Responsive across screen sizes
+---------------------------------------------- */
+
+.game-border {
+    fill: #0e90a6;
+}
+
+.game-bg {
+    fill: #b5288e;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+}
+
+.game-tiles {
+    fill: #ff5b14;
+    cursor: pointer; /* Clickable look */
+}
+
+.game-tiles.active {
+    fill: #ffd700;
+}
+
+#tile {
+    fill: #ffd700;
+}
+
+#tile-0,
+#tile-10,
+#tile-20,
+#tile-30,
+#tile-40,
+#tile-50 {
+    opacity: 50%;
+}
+
+/* ---------------------------------------------
    🎮 MOBILE STYLES
    - Styled like fun arcade board game
    - Responsive across screen sizes
