@@ -1,39 +1,59 @@
 <?php
 /**
- * body.php
- *
- * Global site header for Funbrain Arcade Portfolio.
- * Contains DOCTYPE, head meta info, opening body tag, and the site navigation bar.
- */
+* body.php
+*
+* Main content body for Funbrain Arcade Portfolio.
+* Renders the homepage welcome message, dynamic arcade SVG board,
+* and project sidebar.
+*/
 ?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <main>
- <!-- 🎲 Main welcome section for the portfolio homepage -->
-  <h1>🎲 Welcome to Funbrain Arcade Portfolio!</h1>
-  <p>This is your custom theme homepage.</p>
-  
+    <!-- 🎲 Main welcome section for the portfolio homepage -->
+    <h1>🎲 Welcome to Funbrain Arcade Portfolio!</h1>
+    <p>This is your custom theme homepage.</p>
 
-  <!-- 🎮 Begin arcade grid layout -->    
-<!--
-  <div class="arcade-grid">
-    <section class="tile tile-1">🎨 Project 1</section>
-    <section class="tile tile-2">🕹️ Project 2</section>
-    <section class="tile tile-3">📦 Project 3</section>
-    <section class="tile tile-4">🚀 Project 4</section>
-  </div>
+    <!-- 🕹️ Example: Arcade grid project tiles (commented out for now) -->
+    <!--
+    <div class="arcade-grid">
+        <section class="tile tile-1">🎨 Project 1</section>
+        <section class="tile tile-2">🕹️ Project 2</section>
+        <section class="tile tile-3">📦 Project 3</section>
+        <section class="tile tile-4">🚀 Project 4</section>
+    </div>
     -->
-  
-  <div class="gameboard-wrapper">
-    <aside class="sidebar">
-      <h2>🧩 Project Info</h2>
-      <p>Hover a tile to learn more!</p>
-    </aside>
 
-    <section class="board">
-      <!-- Gameboard.svg -->
-      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.63 395.29">
+    <!-- 🕹️ Main board wrapper: sidebar + SVG game board + player piece -->
+    <div class="gameboard-wrapper">
+
+        <!-- 🧩 Sidebar: project info and hints -->
+        <aside class="sidebar">
+            <h2>🧩 Project Info</h2>
+            <p>Hover a tile to learn more!</p>
+        </aside>
+
+        <!-- 🎮 Game board area -->
+        <section class="board">
+            <!-- 📐 SVG: The main arcade board graphics -->
+            <!-- See <https://www.w3.org/Graphics/SVG/> for latest SVG specs -->
+            <svg id="Layer_2" data-name="Layer 2"
+                 xmlns="<http://www.w3.org/2000/svg>"
+                 viewBox="0 0 467.63 395.29">
+                <!-- 🖼️ Graphic elements and interactive tiles drawn here -->
+                <!-- Tiles use classes + custom data attributes for interactivity -->
+                <!-- Example:
+                    <path
+                        class="game-tiles"
+                        id="tile-0"
+                        d="... (SVG Path) ..."
+                        data-title="Project 1"
+                        data-desc="A fun mini-game built in JS."
+                        data-link="/projects/project-1"/>
+                 -->
+                <!-- [Full SVG content unchanged for brevity] -->
+                
         <g id="_1080_x_1080_px_Logo_1" data-name="1080 x 1080 px Logo 1">
           <g id="Graphic_Elements" data-name="Graphic Elements">
             <g>
@@ -257,11 +277,14 @@
           </g>
         </g>
       
-      </svg>
-      <!-- Gamepiece.png -->
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/Gamepiece.png" alt="Player Piece"
-           class="player-piece"
-           id="player"/>
-    </section>
-  </div> 
+      <!-- SVG content from your original file goes here -->
+            </svg>
+            
+            <!-- 🧑‍🚀 Gamepiece: The moving player marker image -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/Gamepiece.png"
+                alt="Player Piece"
+                class="player-piece"
+                id="player"/>
+        </section>
+    </div>
 </main>

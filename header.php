@@ -10,51 +10,53 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-  <!-- 🧠 Set the character encoding -->
-  <meta charset="<?php bloginfo("charset"); ?>">
+    <!-- 🧠 Set character encoding for the document -->
+    <meta charset="<?php bloginfo("charset"); ?>">
 
-  <!-- 📱 Make the layout responsive on mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 📱 Responsive meta: ensures proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 📛 Page title pulled dynamically from WordPress settings -->
-  <title><?php bloginfo("name"); ?></title>
+    <!-- 📛 Dynamic WordPress page title -->
+    <title><?php bloginfo("name"); ?></title>
 
-  <!-- 🎯 WordPress hook: inserts necessary styles, scripts, meta -->
-  <?php wp_head(); ?>
+    <!-- 🎯 WordPress hook: inserts required styles and meta tags -->
+    <?php wp_head(); ?>
 </head>
 
-<!-- 🎯 WordPress body hook: adds classes for body state, useful for styling -->
+<!-- 🎯 WordPress body hook: adds helpful body classes for styling and state -->
 <body <?php body_class(); ?>>
 
-<!-- 🎮 Site header: logo + navigation bar -->
-<header class="funbrain-header">
+    <!-- 🎮 Main site header: includes logo and navigation -->
+    <header class="funbrain-header">
 
-  <!-- 🔗 Site logo -->
-  <div class="logo">
-    <!-- 🖥️ Desktop Logo -->
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/Logo-3.png"
-       alt="BiscuittLabs Logo"
-       class="logo-desktop">
+        <!-- 🔗 Logo area: switches for desktop/mobile -->
+        <div class="logo">
+            <!-- 🖥️ Desktop logo shown on large screens -->
+            <img
+                src="<?php echo get_template_directory_uri(); ?>/assets/Logo-3.png"
+                alt="BiscuittLabs Logo"
+                class="logo-desktop">
 
-  <!-- 📱 Mobile Logo -->
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/Logo-8.png"
-       alt="BiscuittLabs Mobile Logo"
-       class="logo-mobile">
-  </div>
+            <!-- 📱 Mobile logo shown on small screens -->
+            <img
+                src="<?php echo get_template_directory_uri(); ?>/assets/Logo-8.png"
+                alt="BiscuittLabs Mobile Logo"
+                class="logo-mobile">
+        </div>
 
-  <!-- 🍔 Mobile hamburger button -->
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
+        <!-- 🍔 Hamburger button: toggles navigation menu on mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-  <!-- 🧭 Navigation menu -->
-  <nav class="main-nav" id="mainNav">
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+        <!-- 🧭 Navigation menu: links to important pages -->
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-</header>
+    </header>
