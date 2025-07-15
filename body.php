@@ -282,18 +282,16 @@
             <svg id="path" class="path" data-name="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.95 315.83">
   <defs>
     <style>
-      .cls-1 {
+      .game-path {
         fill: none;
         opacity: 0.21;
         stroke: #000;
-        stroke-miterlimit: 10;
         stroke-width: 2px;
       }
     </style>
   </defs>
   <g id="_1080_x_1080_px_Logo_1" data-name="1080 x 1080 px Logo 1">
     <path
-      class="cls-1"
       id="game-path"
       class="game-path"
       d="
