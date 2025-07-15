@@ -28,6 +28,18 @@ function funbrain_enqueue_assets()
         false, // Version (none)
         true // Load in footer
     );
+
+    // 🍔 Load hamburger menu JS
+    wp_enqueue_script(
+        "funbrain-board", // Handle (name)
+        get_template_directory_uri() . "/js/gameboard.js", // Path to JS file
+        [], // Dependencies (none)
+        false, // Version (none)
+        true // Load in footer
+    );
+
+    // GSAP from CDN
+    wp_enqueue_script("gsap", "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js", [], null, true);
 }
 
 // 🧠 Hook into WordPress: run our function when scripts should be loaded

@@ -1,21 +1,23 @@
 /*
-Theme Name: Funbrain Arcade Portfolio
-Theme URI: https://biscuittlabs.org/
-Author: Zack Fertig
-Description: A custom theme inspired by Funbrain arcade to showcase projects like a portfolio game board.
-Version: 1.0
+==================================================
+🎲 FUNBRAIN ARCADE PORTFOLIO THEME
+- Theme Name: Funbrain Arcade Portfolio
+- Theme URI: <https://biscuittlabs.org/>
+- Author: Zack Fertig
+- Description: A custom theme inspired by Funbrain arcade to showcase projects like a portfolio game board.
+- Version: 1.0
+==================================================
 */
 
-/* ---------------------------------------------
-   🍔 HAMBURGER MENU
-   - Used for mobile navigation
-   - Appears only on screens below 768px
-   - Animates into an "X" when active
----------------------------------------------- */
+/* ==============================================
+🍔 HAMBURGER MENU
+- Mobile navigation: shown under 768px
+- Animates to 'X' when active
+============================================== */
 
 /* Main hamburger button container */
 .hamburger {
-    display: none; /* Hidden by default, shown via media query */
+    display: none; /* Hidden by default, revealed in small screens */
     flex-direction: column;
     justify-content: space-between;
     width: 36px;
@@ -29,7 +31,7 @@ Version: 1.0
     right: 2rem;
 }
 
-/* Individual bars of the hamburger icon */
+/* Hamburger icon bars */
 .hamburger .bar {
     width: 100%;
     height: 4px;
@@ -42,23 +44,21 @@ Version: 1.0
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translateY(8px) translateX(5px);
 }
-
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
-
 .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-8px) translateX(5px);
 }
 
-/* ---------------------------------------------
-   🎨 GLOBAL STYLES
-   - Background, fonts, general page layout
----------------------------------------------- */
+/* ==============================================
+🎨 GLOBAL STYLES
+- Fonts, colors, general page layout
+============================================== */
 
 body {
-    margin: 0; /* Remove default space */
-    padding: 0; /* Remove padding if you had any */
+    margin: 0;
+    padding: 0;
     font-family: "Comic Sans MS", cursive, sans-serif;
     background-color: #ffc80e; /* Funbrain yellow-orange */
     color: #fff;
@@ -73,17 +73,15 @@ h1 {
     border-radius: 20px;
 }
 
-/* ---------------------------------------------
-   🧠 HEADER
-   - Contains logo and nav
-   - Styled like a Funbrain arcade banner
----------------------------------------------- */
+/* ==============================================
+🧠 HEADER
+- Logo and site navigation: Funbrain banner style
+============================================== */
 
-/* Full header bar container */
 .funbrain-header {
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in width */
-    background-color: #00aeef; /* Bright arcade blue */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00aeef;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +89,7 @@ h1 {
     border-bottom: 5px solid #ffd700; /* Arcade yellow underline */
 }
 
-/* Logo sizing */
+/* Logo image sizing and mobile/desktop switching */
 .logo img {
     height: 80px;
 }
@@ -99,18 +97,16 @@ h1 {
 .logo-desktop {
     display: block;
 }
-
 .logo-mobile {
     display: none;
 }
 
-/* ---------------------------------------------
-   🎮 NAVIGATION
-   - Styled like fun arcade buttons
-   - Responsive across screen sizes
----------------------------------------------- */
+/* ==============================================
+🎮 NAVIGATION
+- Arcade-style buttons and layout
+============================================== */
 
-/* Remove default list styling */
+/* Remove default list style from nav and arrange horizontally */
 .main-nav ul {
     list-style: none;
     margin: 0;
@@ -119,7 +115,7 @@ h1 {
     gap: 1.5rem;
 }
 
-/* Nav links styled as buttons */
+/* Nav links as fun arcade buttons */
 .main-nav a {
     display: block;
     padding: 0.5rem 1rem;
@@ -133,7 +129,7 @@ h1 {
     transition: all 0.2s ease;
 }
 
-/* Add hover animation and fun feel */
+/* Hover animation and playful feel */
 .main-nav a:hover {
     background-color: #ffd700;
     color: #000;
@@ -141,13 +137,11 @@ h1 {
     box-shadow: 2px 4px 0 #444;
 }
 
-/* ---------------------------------------------
-   🎮 BOARDGAME GRID
-   - Styled like fun arcade board game
-   - Responsive across screen sizes
----------------------------------------------- */
+/* ==============================================
+🎮 BOARDGAME GRID
+- Project grid: arcade tile look
+============================================== */
 
-/* Arcade Grid Layout */
 .arcade-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -159,7 +153,6 @@ h1 {
     margin-right: auto;
 }
 
-/* Arcade Tile Style */
 .tile {
     background-color: #fff;
     color: #333;
@@ -179,16 +172,115 @@ h1 {
     box-shadow: 6px 8px 0 #000;
 }
 
-/* ---------------------------------------------
-   🎮 MOBILE STYLES
-   - Styled like fun arcade board game
-   - Responsive across screen sizes
----------------------------------------------- */
+/* ==============================================
+🎮 GAMEBOARD STYLES
+- Main board area + sidebar (see also SVG styles below)
+============================================== */
 
-/* Display hamburger + modify layout for small screens */
+.gameboard-wrapper {
+    display: flex; /* Sidebar and board side-by-side */
+    flex-wrap: wrap; /* Wrap on small screens */
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.sidebar {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #932121; /* Funbrain red */
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 #000;
+    font-family: "Comic Sans MS", cursive;
+}
+
+.board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 600px));
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background: #ffd700; /* Arcade yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 16px;
+    box-shadow: 2px 2px 0 #444;
+    position: relative;
+    cursor: pointer;
+}
+
+.player-piece {
+    width: minmax(30, 100px); /* Avatar size */
+    position: absolute;
+    transform: translate(0, 0);
+    transition: transform 0.4s ease;
+    z-index: 10;
+}
+
+/* ==============================================
+🎨 GAMEBOARD SVG LAYER
+- SVG background, tiles, borders
+============================================== */
+
+.path {
+    position: absolute;
+    z-index: -1;
+}
+
+.game-board {
+    z-index: 0;
+}
+
+.game-border {
+    fill: #0e90a6;
+}
+
+.game-bg {
+    fill: #b5288e;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+}
+
+.game-tiles {
+    fill: #ff5b14;
+    cursor: pointer;
+}
+
+.game-tiles.active {
+    fill: #ffd700;
+}
+#tile {
+    fill: #ffd700;
+}
+#tile-0,
+#tile-10,
+#tile-20,
+#tile-30,
+#tile-40,
+#tile-50 {
+    opacity: 50%;
+}
+
+/* ==============================================
+📱 MOBILE STYLES
+- Hamburger, nav, logo switching
+============================================== */
+
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Show hamburger */
+        display: flex; /* Show hamburger in mobile */
         z-index: 10;
     }
 
@@ -206,19 +298,16 @@ h1 {
         display: none; /* Hide nav until toggled */
         width: 100%;
     }
-
     .main-nav.active {
-        display: block; /* Show nav when toggled by JS */
+        display: block; /* Show nav when toggled */
     }
-
     .main-nav ul {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
     }
-
     .main-nav a {
-        width: 100%; /* Full width buttons for easy tapping */
+        width: 100%; /* Full width for big tap targets */
         max-width: 250px;
         text-align: center;
     }
@@ -226,7 +315,6 @@ h1 {
     .logo-desktop {
         display: none;
     }
-
     .logo-mobile {
         display: block;
     }
