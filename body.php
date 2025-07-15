@@ -38,7 +38,7 @@
         <section class="board">
             <!-- 📐 SVG: The main arcade board graphics -->
             <!-- See <https://www.w3.org/Graphics/SVG/> for latest SVG specs -->
-            <svg id="Layer_2" data-name="Layer 2"
+            <svg id="game-board" class="game-board" data-name="game-board"
                  xmlns="<http://www.w3.org/2000/svg>"
                  viewBox="0 0 467.63 395.29">
                 <!-- 🖼️ Graphic elements and interactive tiles drawn here -->
@@ -279,7 +279,83 @@
       
       <!-- SVG content from your original file goes here -->
             </svg>
-            
+            <svg id="path" class="path" data-name="path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.95 315.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0.21;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="_1080_x_1080_px_Logo_1" data-name="1080 x 1080 px Logo 1">
+    <path
+      class="cls-1"
+      id="game-path"
+      class="game-path"
+      d="
+        M27.24,221.23 
+        L3.34,168.38 
+        L1.01,136.36 
+        L10.42,102.94 
+        L44.4,90.85 
+        L76.74,110.21 
+        L86.11,147.95 
+        L84.34,184.74 
+        L86.11,220.04 
+        L105.15,241.28 
+        L138.91,247.36 
+        L168.08,226.32 
+        L177.12,189.35 
+        L163.76,159.63 
+        L142.34,131.5 
+        L117.38,107.75 
+        L94.9,79.26 
+        L97.76,45.98 
+        L139.97,50.07 
+        L154.55,80.94 
+        L172,98.66 
+        L191.3,80.94 
+        L172,51.49 
+        L169.43,20.6 
+        L198.86,1.11 
+        L238.27,14.8 
+        L251.4,44.32 
+        L246.97,78.46 
+        L227.05,102.55 
+        L221.71,128.61 
+        L253.36,133.51 
+        L272.23,97.38 
+        L303.05,66.52 
+        L337.33,76.1 
+        L358.87,109.26 
+        L349.4,146.55 
+        L317.37,167.92 
+        L279.68,166.87 
+        L247.38,173.65 
+        L248.62,202.98 
+        L285.97,204.79 
+        L325.53,204.79 
+        L346.93,233.77 
+        L341.06,268.25 
+        L312.67,283.16 
+        L279.68,276.23 
+        L255.21,253.78 
+        L233.17,233.77 
+        L203.48,237.51 
+        L209.38,275.28 
+        L220.85,307.04 
+        L190.51,314.78 
+        L133.32,290.48 
+        L27.24,221.23 
+        Z
+      " />
+  </g>
+</svg>
+
             <!-- 🧑‍🚀 Gamepiece: The moving player marker image -->
             <img src="<?php echo get_template_directory_uri(); ?>/assets/Gamepiece.png"
                 alt="Player Piece"
